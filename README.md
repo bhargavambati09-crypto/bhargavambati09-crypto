@@ -118,13 +118,7 @@
       </td>
     </tr>
   </table>
-
-  <!-- PROFILE TROPHIES -->
-  <a href="https://github.com/bhargavambati09-crypto">
-    <img src="https://github-profile-trophy.vercel.app/?username=bhargavambati09-crypto&theme=darkhub&no-frame=true&no-bg=true&margin_w=10&margin_h=10" alt="GitHub Trophies" />
-  </a>
 </div>
-
 <br/>
 
 <div align="center">
@@ -337,10 +331,12 @@
 
   <br/>
 
-  <!-- DYNAMIC DEVELOPER QUOTE -->
-  <a href="https://github.com/bhargavambati09-crypto">
-    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
-  </a>
+  <!-- PHILOSOPHY / INSPIRATION -->
+  <p align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #38BDF8; font-size: 14.5px; max-width: 600px; margin: 15px auto;">
+    <i>"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."</i>
+    <br/>
+    <span style="color: #64748B; font-size: 12px; letter-spacing: 1px;">— MARTIN FOWLER</span>
+  </p>
 
   <br/><br/>
   <img src="./assets/cyber_divider.svg" alt="Divider" width="100%" />
