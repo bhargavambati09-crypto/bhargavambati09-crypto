@@ -1,0 +1,160 @@
+<svg width="860" height="230" viewBox="0 0 860 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="45%" stop-color="#0d131f" />
+      <stop offset="100%" stop-color="#080c14" />
+    </linearGradient>
+
+    <!-- Neon Text Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE">
+        <animate attributeName="stop-color" values="#00F2FE; #4FACFE; #9B51E0; #00F2FE" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#4FACFE">
+        <animate attributeName="stop-color" values="#4FACFE; #9B51E0; #00F2FE; #4FACFE" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#9B51E0">
+        <animate attributeName="stop-color" values="#9B51E0; #00F2FE; #4FACFE; #9B51E0" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Border Glow Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#7B2CBF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Beam Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1f293d" stroke-width="0.7" stroke-opacity="0.5" />
+      <circle cx="0" cy="0" r="1.2" fill="#00f2fe" fill-opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <style>
+    .glow-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: 5px;
+      fill: url(#textGrad);
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 13.5px;
+      letter-spacing: 3.5px;
+      fill: #8E9BAE;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      fill: #00F2FE;
+    }
+    .pulse-dot {
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    .streamer {
+      animation: drift 6s linear infinite;
+    }
+    @keyframes drift {
+      0% { transform: translateX(0); opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% { transform: translateX(400px); opacity: 0; }
+    }
+    .beam-line {
+      stroke-dasharray: 80 200;
+      animation: beamRun 5s linear infinite;
+    }
+    @keyframes beamRun {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -560; }
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="856" height="226" rx="16" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Grid Layer -->
+  <rect x="4" y="4" width="852" height="222" rx="14" fill="url(#cyberGrid)" />
+
+  <!-- Ambient Glow Blobs -->
+  <circle cx="150" cy="50" r="90" fill="#00F2FE" fill-opacity="0.07" filter="url(#neonGlow)" />
+  <circle cx="720" cy="170" r="110" fill="#9B51E0" fill-opacity="0.08" filter="url(#neonGlow)" />
+
+  <!-- Cybernetic Corner Brackets -->
+  <path d="M 22 40 L 22 22 L 40 22" fill="none" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 838 40 L 838 22 L 820 22" fill="none" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 22 190 L 22 208 L 40 208" fill="none" stroke="#9B51E0" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 838 190 L 838 208 L 820 208" fill="none" stroke="#9B51E0" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Animated Top Border Beam -->
+  <path class="beam-line" d="M 60 2 L 800 2" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round" filter="url(#subtleGlow)" />
+
+  <!-- Top Pill / Status Tag -->
+  <g transform="translate(325, 32)">
+    <rect x="0" y="0" width="210" height="26" rx="13" fill="#0e1726" stroke="#00F2FE" stroke-opacity="0.4" stroke-width="1" />
+    <circle class="pulse-dot" cx="16" cy="13" r="4.5" fill="#00F5A0" />
+    <text x="32" y="17" class="badge-text">STATUS: ACTIVE &amp; BUILDING</text>
+  </g>
+
+  <!-- Name Title -->
+  <g transform="translate(430, 110)">
+    <text text-anchor="middle" class="glow-title" filter="url(#neonGlow)">BHARGAV AMBATI</text>
+  </g>
+
+  <!-- Subtitle -->
+  <g transform="translate(430, 145)">
+    <text text-anchor="middle" class="subtitle">FULL-STACK DEVELOPER • AI WORKFLOWS • WEB3 ARCHITECT</text>
+  </g>
+
+  <!-- Floating Tech Mini Badges -->
+  <g transform="translate(195, 175)">
+    <!-- Badge 1 -->
+    <rect x="0" y="0" width="82" height="24" rx="6" fill="#131B2E" stroke="#223656" stroke-width="1" />
+    <text x="41" y="16" text-anchor="middle" fill="#38BDF8" font-family="sans-serif" font-size="11" font-weight="600">TypeScript</text>
+
+    <!-- Badge 2 -->
+    <rect x="94" y="0" width="82" height="24" rx="6" fill="#131B2E" stroke="#223656" stroke-width="1" />
+    <text x="135" y="16" text-anchor="middle" fill="#A78BFA" font-family="sans-serif" font-size="11" font-weight="600">React/Next</text>
+
+    <!-- Badge 3 -->
+    <rect x="188" y="0" width="94" height="24" rx="6" fill="#131B2E" stroke="#223656" stroke-width="1" />
+    <text x="235" y="16" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="600">AI Automation</text>
+
+    <!-- Badge 4 -->
+    <rect x="294" y="0" width="86" height="24" rx="6" fill="#131B2E" stroke="#223656" stroke-width="1" />
+    <text x="337" y="16" text-anchor="middle" fill="#F472B6" font-family="sans-serif" font-size="11" font-weight="600">Web3 / DeFi</text>
+
+    <!-- Badge 5 -->
+    <rect x="392" y="0" width="78" height="24" rx="6" fill="#131B2E" stroke="#223656" stroke-width="1" />
+    <text x="431" y="16" text-anchor="middle" fill="#FBBF24" font-family="sans-serif" font-size="11" font-weight="600">Python</text>
+  </g>
+</svg>

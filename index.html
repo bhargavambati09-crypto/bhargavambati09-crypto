@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhargav Ambati (@bhargavambati09-crypto) - GitHub Profile Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-canvas: #0d1117;
+      --bg-surface: #161b22;
+      --border-default: #30363d;
+      --text-primary: #e6edf3;
+      --text-secondary: #7d8590;
+      --accent-cyan: #00f2fe;
+      --accent-purple: #9b51e0;
+      --accent-green: #00f5a0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .github-profile-layout {
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 296px 1fr;
+      gap: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .github-profile-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Left Sidebar (GitHub User Card) */
+    .user-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .user-avatar-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+      border-radius: 50%;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      border: 3px solid #00F2FE;
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.35);
+      margin-bottom: 8px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .user-avatar-wrapper:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 35px rgba(0, 242, 254, 0.6);
+    }
+
+    .user-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .user-names h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .user-names .username {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .user-bio {
+      font-size: 14px;
+      color: #94A3B8;
+      line-height: 1.5;
+      margin-top: 6px;
+    }
+
+    .edit-btn {
+      background: #21262d;
+      border: 1px solid var(--border-default);
+      color: var(--text-primary);
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .edit-btn:hover {
+      background: #30363d;
+    }
+
+    .user-meta-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+
+    .user-meta-items li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Right Main README Container */
+    .readme-card {
+      background: #0d1117;
+      border: 1px solid var(--border-default);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .readme-header {
+      background: #161b22;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-default);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #7d8590;
+    }
+
+    .readme-header .repo-name {
+      color: #58a6ff;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .readme-body {
+      padding: 24px;
+    }
+
+    /* README Rendered Content */
+    .readme-body img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .readme-body table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .readme-body p {
+      margin: 12px 0;
+    }
+
+    /* Guide Banner at Top of Page */
+    .notice-bar {
+      grid-column: 1 / -1;
+      background: linear-gradient(90deg, rgba(0, 242, 254, 0.12), rgba(155, 81, 224, 0.12));
+      border: 1px solid #00F2FE;
+      border-radius: 8px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .notice-bar .text {
+      font-size: 14px;
+    }
+
+    .notice-bar .badge {
+      background: #00F2FE;
+      color: #070a12;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="github-profile-layout">
+
+    <!-- Top Instructions Banner -->
+    <div class="notice-bar">
+      <div class="text">
+        ✨ <b>Live GitHub Profile README Preview for @bhargavambati09-crypto</b> — Optimized with Native Animated SVGs, Dynamic Live GitHub APIs, and Media.
+      </div>
+      <div class="badge">READY TO PUBLISH</div>
+    </div>
+
+    <!-- LEFT SIDEBAR: GITHUB PROFILE USER CARD -->
+    <aside class="user-sidebar">
+      <div class="user-avatar-wrapper">
+        <img class="user-avatar-img" src="./assets/bhargav.jpg" alt="Bhargav Ambati" />
+      </div>
+
+      <div class="user-names">
+        <h1>Bhargav Ambati</h1>
+        <div class="username">bhargavambati09-crypto</div>
+      </div>
+
+      <div class="user-bio">
+        Full-Stack Engineer &amp; AI Workflow Architect. Building WorkFlowX-AI, interactive graphs &amp; Web3 protocols. 🚀
+      </div>
+
+      <div class="edit-btn">Follow</div>
+
+      <ul class="user-meta-items">
+        <li>📍 India • Available Globally</li>
+        <li>🔗 <a href="https://work-flow-x-ai-chi.vercel.app" target="_blank" style="color: #58a6ff; text-decoration: none;">work-flow-x-ai-chi.vercel.app</a></li>
+        <li>💼 Open to High-Impact Roles</li>
+        <li>⭐ 5 Public Repositories</li>
+      </ul>
+    </aside>
+
+    <!-- RIGHT MAIN: GITHUB SPECIAL README -->
+    <main class="readme-card">
+      <div class="readme-header">
+        <div class="repo-name">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1h-8a1 1 0 00-1 1v6.708A2.486 2.486 0 014.5 9h8V1.5z"/></svg>
+          bhargavambati09-crypto / README.md
+        </div>
+        <div>SPECIAL PROFILE REPOSITORY</div>
+      </div>
+
+      <div class="readme-body">
+        
+        <!-- HERO BANNER -->
+        <div align="center">
+          <img src="./assets/header_banner.svg" alt="Bhargav Ambati Banner" style="width: 100%; border-radius: 12px;" />
+          <br/><br/>
+          <img src="./assets/typing_animation.svg" alt="Typing Animation" style="width: 100%; border-radius: 8px;" />
+          <br/>
+          <img src="./assets/cyber_divider.svg" alt="Divider" style="width: 100%;" />
+          
+          <p style="margin: 16px 0;">
+            <img src="https://img.shields.io/badge/REPOSITORIES-5%2B%20SHIPPED-00F2FE?style=for-the-badge&logo=git&logoColor=white&labelColor=0d1117" alt="Repos" />
+            <img src="https://img.shields.io/badge/FEATURED-WorkFlowX--AI-9B51E0?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117" alt="WorkFlowX AI" />
+            <img src="https://img.shields.io/badge/FOCUS-AI%20%7C%20FULLSTACK%20%7C%20WEB3-00F5A0?style=for-the-badge&logo=codewars&logoColor=white&labelColor=0d1117" alt="Focus" />
+            <img src="https://img.shields.io/badge/HIRE%20ME-OPEN%20FOR%20COLLAB-FF007F?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Hire Me" />
+          </p>
+        </div>
+
+        <br/>
+
+        <!-- ABOUT MATRIX -->
+        <table style="border-collapse: collapse; border: none; background: transparent;">
+          <tr style="border: none;">
+            <td width="32%" align="center" valign="middle" style="border: none; padding: 15px;">
+              <img src="./assets/avatar_animated.svg" width="220" height="220" alt="Bhargav Ambati" style="max-width: 100%;" />
+              <br/><br/>
+              <img src="https://img.shields.io/badge/STATUS-ACTIVE%20BUILDER-00F5A0?style=flat-square&logo=github&logoColor=white&labelColor=0d1117" alt="Status" />
+              <br/>
+              <img src="https://img.shields.io/badge/LOCATION-INDIA%20%E2%80%A2%20REMOTE-38BDF8?style=flat-square&logo=googlemaps&logoColor=white&labelColor=0d1117" alt="Location" />
+            </td>
+            <td width="68%" valign="top" style="border: none; padding: 15px; color: #E2E8F0;">
+              <h3 style="margin-top: 0; color: #00F2FE;">⚡ Architecting High-Performance Systems &amp; AI Workflows</h3>
+              <p style="line-height: 1.6; color: #94A3B8; font-size: 14.5px;">
+                Hey there! I am <b style="color: #F8FAFC;">Bhargav Ambati</b>, a full-stack engineer and tech builder passionate about crafting intelligent automation engines, decentralized protocols, and scalable digital solutions with seamless user experiences.
+              </p>
+              <ul style="line-height: 1.8; color: #CBD5E1; font-size: 14px; padding-left: 20px;">
+                <li>🚀 <b>Currently Building:</b> <b style="color: #38BDF8;">WorkFlowX-AI</b> — an autonomous AI orchestration engine transforming complex multi-step workflows.</li>
+                <li>📊 <b>Graph &amp; Data Engineering:</b> Developing <b style="color: #A78BFA;">CLAIM-GRAPH</b>, visualizing dynamic interconnected relationship nodes.</li>
+                <li>🏥 <b>HealthTech Impact:</b> Engineered <b style="color: #34D399;">Holistic-Health-Tracker</b> (TypeScript) &amp; <b style="color: #34D399;">Aarogya</b>.</li>
+                <li>🌐 <b>Web3 &amp; Cryptography:</b> Exploring smart contract ecosystems, DeFi protocols, and decentralized security.</li>
+                <li>💡 <b>Core Philosophy:</b> <i>"Code that is elegant, architectures that scale, and products that create real-world leverage."</i></li>
+                <li>🎯 <b>Open To:</b> High-impact engineering roles, open-source collaborations &amp; AI/Web3 hackathons.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <div align="center">
+          <img src="./assets/cyber_divider.svg" alt="Divider" style="width: 100%;" />
+        </div>
+
+        <br/>
+
+        <!-- TELEMETRY -->
+        <div align="center">
+          <img src="./assets/header_metrics.svg" alt="Telemetry Header" style="width: 100%;" />
+        </div>
+
+        <br/>
+
+        <table>
+          <tr>
+            <td width="50%" align="center" style="border: none; padding: 6px;">
+              <img src="https://github-readme-stats.vercel.app/api?username=bhargavambati09-crypto&show_icons=true&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=00F2FE&icon_color=38BDF8&text_color=94A3B8&border_radius=12" alt="GitHub Stats" width="100%" />
+            </td>
+            <td width="50%" align="center" style="border: none; padding: 6px;">
+              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bhargavambati09-crypto&layout=compact&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=00F2FE&text_color=94A3B8&border_radius=12" alt="Top Languages" width="100%" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center" style="border: none; padding: 6px;">
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=bhargavambati09-crypto&theme=tokyonight&hide_border=true&background=090d16&ring=00F2FE&fire=00F5A0&currStreakNum=38BDF8&border_radius=12" alt="GitHub Streak" width="100%" />
+            </td>
+          </tr>
+        </table>
+
+        <div align="center" style="margin-top: 10px;">
+          <img src="https://github-profile-trophy.vercel.app/?username=bhargavambati09-crypto&theme=darkhub&no-frame=true&no-bg=true&margin_w=10&margin_h=10" alt="GitHub Trophies" />
+        </div>
+
+        <br/>
+        <div align="center">
+          <img src="./assets/cyber_divider.svg" alt="Divider" style="width: 100%;" />
+        </div>
+        <br/>
+
+        <!-- TECH STACK -->
+        <div align="center">
+          <img src="./assets/header_tech.svg" alt="Technical Arsenal Header" style="width: 100%;" />
+        </div>
+
+        <br/>
+
+        <div align="center">
+          <p>
+            <b>💻 Languages &amp; Core:</b><br/>
+            <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+            <img src="https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" alt="Solidity" />
+          </p>
+
+          <p>
+            <b>⚛️ Frontend &amp; UI Architecture:</b><br/>
+            <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+            <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+            <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+            <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+          </p>
+
+          <p>
+            <b>🤖 AI, Backend &amp; Cloud:</b><br/>
+            <img src="https://img.shields.io/badge/AI_Agents-00A67E?style=for-the-badge&logo=openai&logoColor=white" alt="AI Agents" />
+            <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+            <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+            <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+            <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+            <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
+          </p>
+        </div>
+
+        <br/>
+        <div align="center">
+          <img src="./assets/cyber_divider.svg" alt="Divider" style="width: 100%;" />
+        </div>
+        <br/>
+
+        <!-- FEATURED PROJECTS -->
+        <div align="center">
+          <img src="./assets/header_projects.svg" alt="Featured Projects Header" style="width: 100%;" />
+        </div>
+
+        <br/>
+
+        <table>
+          <tr>
+            <td width="50%" valign="top" style="border: none; padding: 8px;">
+              <div style="background: #090d16; border: 1px solid #1E293B; border-radius: 12px; padding: 18px;">
+                <h4 style="margin: 0; color: #00F2FE;">🚀 WorkFlowX-AI</h4>
+                <p style="color: #94A3B8; font-size: 13.5px; line-height: 1.5; margin: 8px 0 12px 0;">
+                  Next-generation AI-powered autonomous workflow automation engine. Connects complex business logic and agentic workflows into frictionless execution pipelines.
+                </p>
+                <img src="https://img.shields.io/badge/LIVE%20DEMO-VISIT%20APP-00F2FE?style=flat-square&logo=vercel&logoColor=white" alt="Demo" />
+              </div>
+            </td>
+            <td width="50%" valign="top" style="border: none; padding: 8px;">
+              <div style="background: #090d16; border: 1px solid #1E293B; border-radius: 12px; padding: 18px;">
+                <h4 style="margin: 0; color: #9B51E0;">📊 CLAIM-GRAPH</h4>
+                <p style="color: #94A3B8; font-size: 13.5px; line-height: 1.5; margin: 8px 0 12px 0;">
+                  High-performance interactive graph visualizer that models claim dependencies, relational networks, and knowledge structures with dynamic node rendering.
+                </p>
+                <img src="https://img.shields.io/badge/REPO-EXPLORE%20CODE-9B51E0?style=flat-square&logo=github&logoColor=white" alt="Code" />
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <br/>
+
+        <!-- SNAKE CONTRIBUTION GRAPH -->
+        <div align="center">
+          <p><b>🐍 Real-Time Contribution Grid Animation:</b></p>
+          <img src="./assets/snake.svg" alt="Contribution Snake" style="width: 100%; border-radius: 8px;" />
+        </div>
+
+        <br/>
+        <div align="center">
+          <img src="./assets/cyber_divider.svg" alt="Divider" style="width: 100%;" />
+        </div>
+        <br/>
+
+        <!-- CONNECT -->
+        <div align="center">
+          <img src="./assets/header_connect.svg" alt="Connect Header" style="width: 100%;" />
+          <br/><br/>
+          <p>
+            <img src="https://img.shields.io/badge/GitHub-bhargavambati09--crypto-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub" />
+            <img src="https://img.shields.io/badge/Portfolio-WorkFlowX--AI-00F2FE?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117" alt="Portfolio" />
+            <img src="https://img.shields.io/badge/Email-Direct%20Transmission-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email" />
+            <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" />
+            <img src="https://img.shields.io/badge/Twitter%2FX-Follow-1DA1F2?style=for-the-badge&logo=x&logoColor=white&labelColor=0d1117" alt="Twitter" />
+          </p>
+
+          <br/>
+          <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
+          <br/><br/>
+          <img src="./assets/cyber_divider.svg" alt="Divider" style="width: 100%;" />
+          <p style="color: #64748B; font-size: 12px; letter-spacing: 1px;">
+            ⚡ CRAFTED WITH OBSESSIVE CARE FOR <b>BHARGAV AMBATI</b> • KEEP BUILDING &amp; SHIPPING ⚡
+          </p>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

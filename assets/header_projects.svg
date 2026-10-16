@@ -1,0 +1,28 @@
+<svg width="860" height="52" viewBox="0 0 860 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerBg_FEATURED_CREATIONS_&amp;_WORKFLOWS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#05080e" />
+    </linearGradient>
+    <linearGradient id="accentGrad_FEATURED_CREATIONS_&amp;_WORKFLOWS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#9B51E0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background bar -->
+  <rect x="0" y="4" width="860" height="44" rx="10" fill="url(#headerBg_FEATURED_CREATIONS_&amp;_WORKFLOWS)" stroke="#1E293B" stroke-width="1.2" />
+
+  <!-- Left Accent Accent Line -->
+  <rect x="0" y="4" width="5" height="44" rx="2" fill="url(#accentGrad_FEATURED_CREATIONS_&amp;_WORKFLOWS)" />
+
+  <!-- Icon SVG -->
+  <g transform="translate(20, 16)">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="none" stroke="#FBBF24" stroke-width="2"/>
+  </g>
+
+  <!-- Title Text -->
+  <text x="56" y="28" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">FEATURED CREATIONS &amp; WORKFLOWS</text>
+  <text x="56" y="40" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" letter-spacing="0.8">PRODUCTION PLATFORMS &amp; HIGH-IMPACT OPEN SOURCE PROJECTS</text>
+</svg>

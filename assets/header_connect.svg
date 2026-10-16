@@ -1,0 +1,28 @@
+<svg width="860" height="52" viewBox="0 0 860 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerBg_TRANSMISSION_&amp;_CONNECTIVITY" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#05080e" />
+    </linearGradient>
+    <linearGradient id="accentGrad_TRANSMISSION_&amp;_CONNECTIVITY" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#9B51E0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background bar -->
+  <rect x="0" y="4" width="860" height="44" rx="10" fill="url(#headerBg_TRANSMISSION_&amp;_CONNECTIVITY)" stroke="#1E293B" stroke-width="1.2" />
+
+  <!-- Left Accent Accent Line -->
+  <rect x="0" y="4" width="5" height="44" rx="2" fill="url(#accentGrad_TRANSMISSION_&amp;_CONNECTIVITY)" />
+
+  <!-- Icon SVG -->
+  <g transform="translate(20, 16)">
+    <circle cx="6" cy="12" r="3" fill="#A78BFA"/><circle cx="18" cy="6" r="3" fill="#A78BFA"/><circle cx="18" cy="18" r="3" fill="#A78BFA"/><line x1="8.5" y1="10.5" x2="15.5" y2="7.5" stroke="#A78BFA" stroke-width="1.8"/><line x1="8.5" y1="13.5" x2="15.5" y2="16.5" stroke="#A78BFA" stroke-width="1.8"/>
+  </g>
+
+  <!-- Title Text -->
+  <text x="56" y="28" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">TRANSMISSION &amp; CONNECTIVITY</text>
+  <text x="56" y="40" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" letter-spacing="0.8">LET'S BUILD SOMETHING EXTRAORDINARY TOGETHER</text>
+</svg>

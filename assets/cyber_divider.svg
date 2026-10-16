@@ -1,0 +1,62 @@
+<svg width="860" height="26" viewBox="0 0 860 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00F2FE" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#9B51E0" stop-opacity="1" />
+      <stop offset="75%" stop-color="#00F2FE" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#9B51E0" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="divGlow" x="-10%" y="-100%" width="120%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .pulse-core {
+      animation: coreGlow 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes coreGlow {
+      0% { transform: scale(0.9); opacity: 0.7; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+    .energy-beam {
+      animation: sweep 4s ease-in-out infinite alternate;
+    }
+    @keyframes sweep {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(460px); }
+    }
+  </style>
+
+  <!-- Horizontal Glow Base Line -->
+  <rect x="40" y="12" width="780" height="2" rx="1" fill="url(#divGrad)" />
+
+  <!-- Animated Gliding Energy Beam -->
+  <g class="energy-beam">
+    <rect x="180" y="11" width="120" height="4" rx="2" fill="url(#beamGrad)" filter="url(#divGlow)" opacity="0.8" />
+  </g>
+
+  <!-- Center Diamond Tech Core -->
+  <g transform="translate(430, 13)">
+    <polygon class="pulse-core" points="0,-7 7,0 0,7 -7,0" fill="#00F2FE" filter="url(#divGlow)" />
+    <polygon points="0,-3.5 3.5,0 0,3.5 -3.5,0" fill="#FFFFFF" />
+  </g>
+
+  <!-- Lateral Accent Nodes -->
+  <circle cx="340" cy="13" r="2.5" fill="#00F2FE" opacity="0.8" />
+  <circle cx="520" cy="13" r="2.5" fill="#00F2FE" opacity="0.8" />
+  <circle cx="230" cy="13" r="2" fill="#9B51E0" opacity="0.6" />
+  <circle cx="630" cy="13" r="2" fill="#9B51E0" opacity="0.6" />
+</svg>

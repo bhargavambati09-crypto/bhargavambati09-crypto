@@ -1,0 +1,83 @@
+<svg width="860" height="54" viewBox="0 0 860 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="typeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+    <linearGradient id="typeBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#7B2CBF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .type-container {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+    }
+    .cursor {
+      animation: blink 0.8s infinite;
+      fill: #00F2FE;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    
+    .msg-1 { animation: cycle1 16s infinite; }
+    .msg-2 { animation: cycle2 16s infinite; }
+    .msg-3 { animation: cycle3 16s infinite; }
+    .msg-4 { animation: cycle4 16s infinite; }
+
+    @keyframes cycle1 {
+      0%, 20% { opacity: 1; transform: translateY(0); }
+      24%, 96% { opacity: 0; transform: translateY(-6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cycle2 {
+      0%, 22% { opacity: 0; transform: translateY(6px); }
+      26%, 46% { opacity: 1; transform: translateY(0); }
+      50%, 100% { opacity: 0; transform: translateY(-6px); }
+    }
+    @keyframes cycle3 {
+      0%, 48% { opacity: 0; transform: translateY(6px); }
+      52%, 72% { opacity: 1; transform: translateY(0); }
+      76%, 100% { opacity: 0; transform: translateY(-6px); }
+    }
+    @keyframes cycle4 {
+      0%, 74% { opacity: 0; transform: translateY(6px); }
+      78%, 96% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-6px); }
+    }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="856" height="50" rx="10" fill="url(#typeBg)" stroke="url(#typeBorder)" stroke-width="1.2" />
+
+  <!-- Terminal Prompt Icon -->
+  <g transform="translate(20, 18)">
+    <text x="0" y="15" fill="#00F2FE" font-family="monospace" font-size="16" font-weight="bold">&gt;</text>
+  </g>
+
+  <!-- Animated Rotating Phrases -->
+  <g transform="translate(42, 32)" class="type-container">
+    <g class="msg-1">
+      <text fill="#E2E8F0">👋 Hello World! I'm <tspan fill="#00F2FE" font-weight="bold">Bhargav Ambati</tspan> — Building scalable software &amp; AI architectures.</text>
+    </g>
+    <g class="msg-2">
+      <text fill="#E2E8F0">🤖 Architecting <tspan fill="#38BDF8" font-weight="bold">AI Agents</tspan> &amp; Automated Systems like <tspan fill="#F472B6" font-weight="bold">WorkFlowX-AI</tspan>.</text>
+    </g>
+    <g class="msg-3">
+      <text fill="#E2E8F0">⚡ Engineering Scalable <tspan fill="#34D399" font-weight="bold">Full-Stack Solutions</tspan> with Next.js, TypeScript &amp; Python.</text>
+    </g>
+    <g class="msg-4">
+      <text fill="#E2E8F0">🌐 Passionate about <tspan fill="#A78BFA" font-weight="bold">Web3, Cryptography</tspan> &amp; Contributing to Open Source.</text>
+    </g>
+  </g>
+
+  <!-- Blinking Cursor Tag -->
+  <rect class="cursor" x="820" y="18" width="9" height="17" rx="2" />
+</svg>
